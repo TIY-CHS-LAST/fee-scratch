@@ -7,13 +7,13 @@ function createFighterListItem (fighterObj) {
   // wins
   // losses
   const tmplStr = `
-    <li>
-     <div><img src="${fighterObj.profile_image}" /></div>
-     <div>
-       <h3>${fighterObj.first_name} ${fighterObj.last_name}</h3>
-       <p>Wins: ${fighterObj.wins} Losses: ${fighterObj.losses}</p>
-     </div>
-    </li>
+    <section class="fighter">
+      <div class="division">${fighterObj.weight_class}</div>
+      <img src="${fighterObj.profile_image}" alt="${fighterObj.first_name} ${fighterObj.last_name}">
+      <p class="name">${fighterObj.first_name} ${fighterObj.last_name}</p>
+      <p class="record">${fighterObj.wins}-${fighterObj.losses}-${fighterObj.draws} ( W-L-D )</p>
+      <button>More</button>
+    </section>
   `
   return tmplStr;
 }
